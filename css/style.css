@@ -1507,7 +1507,7 @@ color: #151C4B;
     font-weight: 700;
 }
 .product-qulity li .icon {
-  width: 140px;
+  /* width: 140px; */
   margin-top: 12px;
 }
 .product-qulity li .icon img{
