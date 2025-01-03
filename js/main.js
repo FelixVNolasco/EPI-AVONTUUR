@@ -556,6 +556,10 @@ $.scrollUp({
 	activeOverlay: false,
 });
 
+// WhatsApp button
+$(".whatsapp-btn").on("click", function () {
+    window.open("https://api.whatsapp.com/send?phone=+91-7052-101-786", "_blank");
+});
 
 // isotop
 	$('.grid').imagesLoaded(function () {

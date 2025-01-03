@@ -1,14 +1,23 @@
+
+
 <?php
-$firstn = $_POST['firstn'];
-$lastn = $_POST['lastn'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$services = $_POST['services'];
-$message = $_POST['message'];
-$formcontent="First Name: $firstn \n Last Name: $lastn \n Email: $email \n Services: $services \n Phone: $phone \n Message: $message";
-$recipient = "mdsubhan.53@gmail.com";
-$subject = "Contact Form";
-$mailheader = "From: $email \r\n";
-mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-require_once "thank-you.html";
-?>
+
+// Include Composer autoload file to load Resend SDK classes...
+require __DIR__ . '/vendor/autoload.php';
+
+// Assign a new Resend Client instance to $resend variable, which is automatically autoloaded...
+$resend = Resend::client('re_SWujrBS8_LVE4q4EQnF9F6wJvqtz7Q7fM');
+
+try {
+    $result = $resend->emails->send([
+        'from' => 'Acme <onboarding@resend.dev>',
+        'to' => ['felixvnolasco@gmail.com'],
+        'subject' => 'Hello world',
+        'html' => '<strong>It works!</strong>',
+    ]);
+} catch (\Exception $e) {
+    exit('Error: ' . $e->getMessage());
+}
+
+// Show the response of the sent email to be saved in a log...
+echo $result->toJson();
