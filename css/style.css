@@ -351,7 +351,7 @@ display: inline-block;
 margin-right: 5px;
 position: relative;
 top: 1px;
-color: #151C4B;
+color: #ffffff;
 }
 .header-top-cta ul li {
 	display: inline-block;
@@ -387,7 +387,7 @@ height: 100%;
 position: absolute;
 left: 0;
 top: 0;
-background: #151C4B;
+background: #00173c;
 }
 
 .menu .sub-menu{
@@ -5286,7 +5286,7 @@ width: 70px;
 .footer-link ul li a::before {
   content: "+";
   margin-right: 8px;
-  color: #151C4B;
+  color: white;
   font-size: 18px;
 }
 .footer-link ul li a:hover{color: #fff;}
@@ -5334,7 +5334,7 @@ margin-bottom: 10px;
 .f-insta ul li:hover a::before{top: 50%;opacity: 1;}
 .f-insta ul li:hover a::after{opacity: .6;}
 .copyright-wrap {
-    background: #151C4B;
+    background: #00173c;
     color: #fff;
     font-size: 15px;
 }
